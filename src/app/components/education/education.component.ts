@@ -26,41 +26,41 @@ interface Certification {
 export class EducationComponent {
   education: Education[] = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      duration: '2014 - 2018',
+      degree: 'Bachelor of Technology in Computer Science',
+      institution: 'Dr. A.P.J. Abdul Kalam Technical University',
+      duration: '2019 - 2023',
       description: 'Focused on software engineering, algorithms, and web development.',
       achievements: [
-        'GPA: 3.8/4.0',
-        "Dean's List",
-        'Computer Science Honor Society'
+        'GPA: 8/10',
+        "First Division with Distinction",
+        'AKTU'
       ]
     }
   ];
 
   certifications: Certification[] = [
     {
-      name: 'AWS Certified Developer',
-      issuer: 'Amazon Web Services',
-      year: '2023',
+      name: 'Azure AI Fundamentals',
+      issuer: 'Microsoft',
+      year: '2025',
       icon: '☁️'
     },
     {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google',
-      year: '2022',
-      icon: '🌐'
+      name: 'Azure Fundamentals',
+      issuer: 'Microsoft',
+      year: '2025',
+      icon: '☁️'
     },
     {
       name: 'Angular Certified Developer',
-      issuer: 'Google',
+      issuer: 'Udemy',
       year: '2021',
       icon: '🅰️'
     },
     {
-      name: 'MongoDB Developer',
-      issuer: 'MongoDB Inc.',
-      year: '2020',
+      name: 'React, NodeJS, Express & MongoDB -MERN Fullstack',
+      issuer: 'Udemy',
+      year: '2023',
       icon: '🍃'
     }
   ];
