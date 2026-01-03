@@ -256,6 +256,7 @@
   font-weight: 500;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   animation: badge-float 3s ease-in-out infinite;
+  backdrop-filter: blur(10px);
 }
 
 .badge-1 {
@@ -274,6 +275,30 @@
   bottom: 20px;
   right: 20px;
   animation-delay: -2s;
+}
+
+.badge-4 {
+  top: 80px;
+  left: -30px;
+  animation-delay: -0.5s;
+}
+
+.badge-5 {
+  top: 160px;
+  right: -15px;
+  animation-delay: -1.5s;
+}
+
+.badge-6 {
+  bottom: 120px;
+  right: -25px;
+  animation-delay: -2.5s;
+}
+
+.badge-7 {
+  top: 220px;
+  left: 10px;
+  animation-delay: -3s;
 }
 
 @keyframes badge-float {
@@ -405,6 +430,12 @@
 
   .floating-badge {
     display: none;
+  }
+
+  .badge-1,
+  .badge-2,
+  .badge-3 {
+    display: block;
   }
 
   .scroll-indicator {

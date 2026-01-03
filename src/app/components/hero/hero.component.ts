@@ -9,6 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+  technologies = [
+    'Angular',
+    'TypeScript', 
+    'React',
+    '.NET',
+    'Azure',
+    'DevOps',
+    'SQL Server'
+  ];
+
   socialLinks = [
     { 
       name: 'GitHub', 
