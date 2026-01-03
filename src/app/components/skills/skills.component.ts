@@ -21,11 +21,11 @@ export class SkillsComponent {
       icon: '🎨',
       skills: [
         { name: 'Angular', level: 95 },
+        { name: 'Copilot', level: 80 },
         { name: 'React', level: 85 },
         { name: 'TypeScript', level: 90 },
         { name: 'JavaScript', level: 95 },
-        { name: 'HTML5/CSS3', level: 90 },
-        { name: 'SASS', level: 85 }
+        { name: 'HTML5/CSS3', level: 90 }
       ]
     },
     {
@@ -33,10 +33,9 @@ export class SkillsComponent {
       icon: '⚙️',
       skills: [
         { name: 'Node.js', level: 88 },
-        { name: 'Python', level: 80 },
+        { name: '.Net Framwork', level: 80 },
         { name: 'Express.js', level: 85 },
-        { name: 'REST APIs', level: 90 },
-        { name: 'GraphQL', level: 75 }
+        { name: 'REST APIs', level: 90 }
       ]
     },
     {
@@ -44,9 +43,8 @@ export class SkillsComponent {
       icon: '🗄️',
       skills: [
         { name: 'MongoDB', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'MySQL', level: 82 },
-        { name: 'Redis', level: 70 }
+        { name: 'Sql Server Management', level: 80 },
+        { name: 'MySQL', level: 82 }
       ]
     },
     {
@@ -54,8 +52,9 @@ export class SkillsComponent {
       icon: '🛠️',
       skills: [
         { name: 'Git', level: 90 },
-        { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 75 },
+        { name: 'Visual Studio', level: 95 },
+        { name: 'SonarQube', level: 80 },
+        { name: 'Azure DevOps', level: 75 },
         { name: 'CI/CD', level: 82 },
         { name: 'Jira', level: 85 }
       ]
