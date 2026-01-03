@@ -27,13 +27,34 @@ export class HeroComponent {
     },
     { 
       name: 'LinkedIn', 
-      url: 'https://linkedin.com/in/bhuiyash',
+      url: 'https://www.linkedin.com/in/bhuiyash-kumar/',
       icon: 'linkedin'
     },
     { 
       name: 'Email', 
-      url: 'mailto:bhuiyash@example.com',
+      url: 'mailto:bhuiyashkr@gmail.com',
       icon: 'email'
     }
   ];
+
+  onEmailClick() {
+    // Fallback for when mailto doesn't work
+    const email = 'bhuiyashkr@gmail.com';
+    const subject = 'Hello from your portfolio website';
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    
+    // Try to open email client
+    window.location.href = mailtoUrl;
+    
+    // If that doesn't work, show an alert with the email
+    setTimeout(() => {
+      if (confirm('If your email client didn\'t open, would you like to copy the email address to clipboard?')) {
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email address copied to clipboard: ' + email);
+        }).catch(() => {
+          alert('Email address: ' + email);
+        });
+      }
+    }, 100);
+  }
 }
