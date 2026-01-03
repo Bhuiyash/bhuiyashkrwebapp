@@ -1,0 +1,59 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get To Know</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+
+    <div class="about-content">
+      <div class="about-image">
+        <div class="image-wrapper">
+          <div class="image-bg"></div>
+          <div class="image-placeholder">
+            <span>BK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="intro">
+          I'm a passionate <span class="highlight">Software Developer</span> with a love for creating 
+          elegant solutions to complex problems. With expertise in modern web technologies, 
+          I build applications that are not only functional but also beautiful and user-friendly.
+        </p>
+
+        <p>
+          My journey in software development started with curiosity about how things work on the web. 
+          Today, I specialize in building scalable web applications using technologies like 
+          <span class="highlight">Angular</span>, <span class="highlight">React</span>, 
+          <span class="highlight">Node.js</span>, and <span class="highlight">TypeScript</span>.
+        </p>
+
+        <p>
+          When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+          projects, or sharing knowledge with the developer community. I believe in continuous learning 
+          and staying updated with the latest industry trends.
+        </p>
+
+        <div class="highlights-grid">
+          @for (item of highlights; track item.label) {
+            <div class="highlight-card">
+              <span class="highlight-icon">{{ item.icon }}</span>
+              <span class="highlight-value">{{ item.value }}</span>
+              <span class="highlight-label">{{ item.label }}</span>
+            </div>
+          }
+        </div>
+
+        <a href="assets/BhuiyashKumarResume.pdf" target="_blank" class="download-btn">
+          <span>Download Resume</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

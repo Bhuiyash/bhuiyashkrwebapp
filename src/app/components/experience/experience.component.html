@@ -1,0 +1,40 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Work Experience</h2>
+    </div>
+
+    <div class="timeline">
+      @for (exp of experiences; track exp.title; let i = $index) {
+        <div class="timeline-item" [class.right]="i % 2 !== 0">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="card-header">
+                <span class="duration">{{ exp.duration }}</span>
+                <h3 class="job-title">{{ exp.title }}</h3>
+                <p class="company">{{ exp.company }}</p>
+              </div>
+              <div class="card-body">
+                <p class="description">{{ exp.description }}</p>
+                <ul class="responsibilities">
+                  @for (resp of exp.responsibilities; track resp) {
+                    <li>{{ resp }}</li>
+                  }
+                </ul>
+                <div class="technologies">
+                  @for (tech of exp.technologies; track tech) {
+                    <span class="tech-tag">{{ tech }}</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

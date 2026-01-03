@@ -1,0 +1,253 @@
+.experience-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #0a0f1a 0%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.3) 10%, rgba(59, 130, 246, 0.3) 90%, transparent 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  color: #60a5fa;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 50%;
+  padding-right: 3rem;
+}
+
+.timeline-item.right {
+  margin-left: 50%;
+  padding-right: 0;
+  padding-left: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  right: -12px;
+  top: 30px;
+  z-index: 10;
+}
+
+.timeline-item.right .timeline-marker {
+  right: auto;
+  left: -12px;
+}
+
+.marker-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: 4px solid #0f172a;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.experience-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.duration {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: #60a5fa;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.description {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.responsibilities li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 968px) {
+  .experience-section::before {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item.right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+
+  .timeline-marker,
+  .timeline-item.right .timeline-marker {
+    left: 8px;
+    right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline-item,
+  .timeline-item.right {
+    padding-left: 40px;
+  }
+
+  .card-header,
+  .card-body {
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
+}

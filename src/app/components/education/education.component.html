@@ -1,0 +1,56 @@
+<section id="education" class="education-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Learning Journey</span>
+      <h2 class="section-title">Education & Certifications</h2>
+    </div>
+
+    <div class="education-content">
+      <!-- Education -->
+      <div class="education-block">
+        <h3 class="block-title">
+          <span class="block-icon">🎓</span>
+          Education
+        </h3>
+        @for (edu of education; track edu.degree) {
+          <div class="education-card">
+            <div class="card-decoration"></div>
+            <div class="card-content">
+              <span class="duration">{{ edu.duration }}</span>
+              <h4 class="degree">{{ edu.degree }}</h4>
+              <p class="institution">{{ edu.institution }}</p>
+              <p class="description">{{ edu.description }}</p>
+              @if (edu.achievements) {
+                <div class="achievements">
+                  @for (achievement of edu.achievements; track achievement) {
+                    <span class="achievement-tag">{{ achievement }}</span>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Certifications -->
+      <div class="certifications-block">
+        <h3 class="block-title">
+          <span class="block-icon">🏆</span>
+          Certifications
+        </h3>
+        <div class="certifications-grid">
+          @for (cert of certifications; track cert.name) {
+            <div class="certification-card">
+              <span class="cert-icon">{{ cert.icon }}</span>
+              <div class="cert-info">
+                <h4 class="cert-name">{{ cert.name }}</h4>
+                <p class="cert-issuer">{{ cert.issuer }}</p>
+                <span class="cert-year">{{ cert.year }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
