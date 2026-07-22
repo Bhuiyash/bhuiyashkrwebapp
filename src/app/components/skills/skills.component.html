@@ -17,7 +17,7 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">{{ skill.name }}</span>
-                  <span class="skill-level">{{ skill.level }}%</span>
+                  <span class="skill-level"><span [appCountUp]="skill.level" [countDuration]="1200"></span>%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" [style.width.%]="skill.level"></div>

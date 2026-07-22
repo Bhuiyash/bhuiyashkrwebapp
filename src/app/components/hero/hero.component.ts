@@ -1,10 +1,12 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MagneticDirective } from '../../directives/magnetic.directive';
+import { RippleDirective } from '../../directives/ripple.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MagneticDirective, RippleDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
@@ -12,6 +14,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   roles = ['Software Developer', '.NET Developer', 'Angular Developer', 'Full-Stack Engineer'];
   displayedRole = signal('');
   avatarTilt = signal({ rx: 0, ry: 0 });
+  orbParallax = signal({ x: 0, y: 0 });
 
   private roleIndex = 0;
   private charIndex = 0;
@@ -47,6 +50,20 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   onAvatarMouseLeave(): void {
     this.avatarTilt.set({ rx: 0, ry: 0 });
+  }
+
+  onHeroMouseMove(event: MouseEvent): void {
+    if (this.reduceMotion) {
+      return;
+    }
+    const rect = (event.currentTarget as HTMLElement).getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    this.orbParallax.set({ x, y });
+  }
+
+  onHeroMouseLeave(): void {
+    this.orbParallax.set({ x: 0, y: 0 });
   }
 
   private typeLoop(): void {

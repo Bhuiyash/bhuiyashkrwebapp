@@ -20,6 +20,7 @@
   filter: blur(80px);
   opacity: 0.5;
   animation: float 8s ease-in-out infinite;
+  transition: translate 0.4s ease-out;
 }
 
 .orb-1 {

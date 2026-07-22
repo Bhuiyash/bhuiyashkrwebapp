@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 import { CountUpDirective } from '../../directives/count-up.directive';
 import { SpotlightDirective } from '../../directives/spotlight.directive';
+import { MagneticDirective } from '../../directives/magnetic.directive';
+import { RippleDirective } from '../../directives/ripple.directive';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, ScrollRevealDirective, CountUpDirective, SpotlightDirective],
+  imports: [CommonModule, ScrollRevealDirective, CountUpDirective, SpotlightDirective, MagneticDirective, RippleDirective],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
