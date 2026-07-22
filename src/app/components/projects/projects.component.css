@@ -1,6 +1,6 @@
 .projects-section {
   padding: 6rem 2rem;
-  background: #0a0f1a;
+  background: var(--bg-base-alt);
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   position: relative;
   display: inline-block;
 }
@@ -84,7 +84,7 @@
 
 .image-placeholder {
   height: 350px;
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--img-gradient-a) 0%, var(--img-gradient-b) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,12 +144,12 @@
 .project-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   margin: 0.5rem 0 1rem;
 }
 
 .project-description {
-  background: rgba(30, 41, 59, 0.8);
+  background: var(--surface-card-solid);
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 12px;
   padding: 1.5rem;
@@ -157,7 +157,7 @@
 }
 
 .project-description p {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -184,7 +184,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 2rem;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .project-card {
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--surface-card);
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 16px;
   padding: 2rem;
@@ -227,7 +227,7 @@
 }
 
 .card-link {
-  color: #64748b;
+  color: var(--text-subtle);
   transition: all 0.3s ease;
 }
 
@@ -239,7 +239,7 @@
 .card-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 0.75rem;
   transition: color 0.3s ease;
 }
@@ -249,7 +249,7 @@
 }
 
 .card-description {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.6;
   flex: 1;
@@ -263,7 +263,7 @@
 }
 
 .card-tech span {
-  color: #64748b;
+  color: var(--text-subtle);
   font-size: 0.8rem;
   font-family: monospace;
 }

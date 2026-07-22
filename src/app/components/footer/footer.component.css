@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  background: #060a10;
+  background: var(--bg-base-deep);
 }
 
 .footer-wave {
@@ -70,7 +70,7 @@
 }
 
 .tagline {
-  color: #64748b;
+  color: var(--text-subtle);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -80,7 +80,7 @@
 .footer-social h4 {
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 1.25rem;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .footer-links a {
-  color: #64748b;
+  color: var(--text-subtle);
   text-decoration: none;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -138,12 +138,12 @@
 }
 
 .copyright {
-  color: #64748b;
+  color: var(--text-subtle);
   font-size: 0.85rem;
 }
 
 .built-with {
-  color: #64748b;
+  color: var(--text-subtle);
   font-size: 0.85rem;
   display: flex;
   align-items: center;

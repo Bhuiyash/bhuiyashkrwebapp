@@ -1,6 +1,6 @@
 .about-section {
   padding: 6rem 2rem;
-  background: #0a0f1a;
+  background: var(--bg-base-alt);
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   position: relative;
   display: inline-block;
 }
@@ -78,7 +78,7 @@
 .image-placeholder {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--img-gradient-a) 0%, var(--img-gradient-b) 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@
 }
 
 .about-text {
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .about-text p {
@@ -151,7 +151,7 @@
   display: block;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -161,7 +161,7 @@
 .highlight-label {
   display: block;
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--text-subtle);
   margin-top: 0.25rem;
 }
 

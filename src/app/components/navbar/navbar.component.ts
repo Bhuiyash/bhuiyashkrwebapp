@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  private themeService = inject(ThemeService);
+
+  theme = this.themeService.theme;
   isScrolled = false;
   isMobileMenuOpen = false;
 
@@ -32,5 +36,9 @@ export class NavbarComponent {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+  }
+
+  toggleTheme() {
+    this.themeService.toggle();
   }
 }

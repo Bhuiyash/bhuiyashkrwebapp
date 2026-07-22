@@ -10,7 +10,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(15, 23, 42, 0.95);
+  background: var(--surface-header);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding: 0.75rem 2rem;
@@ -29,7 +29,7 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: white;
+  color: var(--text-heading);
 }
 
 .logo-icon {
@@ -65,7 +65,7 @@
 }
 
 .nav-link {
-  color: #94a3b8;
+  color: var(--text-muted);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -88,7 +88,7 @@
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: var(--text-heading);
 }
 
 .nav-link:hover::after {
@@ -116,6 +116,27 @@
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  color: var(--text-heading);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: rotate(15deg);
+}
+
 .mobile-menu-btn {
   display: none;
   flex-direction: column;
@@ -129,7 +150,7 @@
 .mobile-menu-btn span {
   width: 25px;
   height: 2px;
-  background: white;
+  background: var(--text-heading);
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -164,7 +185,7 @@
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(15, 23, 42, 0.98);
+    background: var(--surface-header-mobile);
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
