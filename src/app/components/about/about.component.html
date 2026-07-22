@@ -1,12 +1,12 @@
 <section id="about" class="about-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appScrollReveal>
       <span class="section-tag">Get To Know</span>
       <h2 class="section-title">About Me</h2>
     </div>
 
     <div class="about-content">
-      <div class="about-image">
+      <div class="about-image" appScrollReveal>
         <div class="image-wrapper">
           <div class="image-bg"></div>
           <div class="image-placeholder">
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="about-text">
+      <div class="about-text" appScrollReveal [revealDelay]="150">
         <p class="intro">
           I'm a passionate <span class="highlight">Software Developer</span> with a love for creating 
           elegant solutions to complex problems. With expertise in modern web technologies, 
@@ -35,16 +35,22 @@
         </p>
 
         <div class="highlights-grid">
-          @for (item of highlights; track item.label) {
-            <div class="highlight-card">
+          @for (item of highlights; track item.label; let i = $index) {
+            <div class="highlight-card" appSpotlight appScrollReveal [revealDelay]="i * 100">
               <span class="highlight-icon">{{ item.icon }}</span>
-              <span class="highlight-value">{{ item.value }}</span>
+              <span class="highlight-value">
+                @if (item.target !== null) {
+                  <span [appCountUp]="item.target" [countDecimals]="item.decimals"></span>{{ item.suffix }}
+                } @else {
+                  {{ item.display }}
+                }
+              </span>
               <span class="highlight-label">{{ item.label }}</span>
             </div>
           }
         </div>
 
-        <a href="assets/Bhuiyash_AI_CV.pdf" target="_blank" class="download-btn">
+        <a href="assets/Bhuiyash_AI_CV.pdf" target="_blank" class="download-btn" appMagnetic appRipple>
           <span>Download Resume</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>

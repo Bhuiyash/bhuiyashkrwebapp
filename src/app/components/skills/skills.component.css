@@ -132,8 +132,13 @@
   background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
   border-radius: 10px;
   position: relative;
-  animation: fillBar 1.5s ease-out forwards;
   transform-origin: left;
+  transform: scaleX(0);
+}
+
+.skill-category.revealed .skill-progress {
+  animation: fillBar 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
 }
 
 @keyframes fillBar {

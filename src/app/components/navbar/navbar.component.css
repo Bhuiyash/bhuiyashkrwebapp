@@ -95,6 +95,14 @@
   width: 80%;
 }
 
+.nav-link.active {
+  color: var(--text-heading);
+}
+
+.nav-link.active::after {
+  width: 80%;
+}
+
 .resume-btn {
   display: flex;
   align-items: center;

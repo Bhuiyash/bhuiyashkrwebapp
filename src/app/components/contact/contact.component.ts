@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
+import { SpotlightDirective } from '../../directives/spotlight.directive';
+import { MagneticDirective } from '../../directives/magnetic.directive';
+import { RippleDirective } from '../../directives/ripple.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ScrollRevealDirective, SpotlightDirective, MagneticDirective, RippleDirective],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

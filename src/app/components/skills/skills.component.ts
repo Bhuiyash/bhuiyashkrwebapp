@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
+import { SpotlightDirective } from '../../directives/spotlight.directive';
+import { CountUpDirective } from '../../directives/count-up.directive';
 
 interface SkillCategory {
   name: string;
@@ -10,7 +13,7 @@ interface SkillCategory {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective, SpotlightDirective, CountUpDirective],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })

@@ -1,13 +1,13 @@
 <section id="skills" class="skills-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appScrollReveal>
       <span class="section-tag">What I Know</span>
       <h2 class="section-title">Skills & Technologies</h2>
     </div>
 
     <div class="skills-grid">
-      @for (category of skillCategories; track category.name) {
-        <div class="skill-category">
+      @for (category of skillCategories; track category.name; let i = $index) {
+        <div class="skill-category" appSpotlight appScrollReveal [revealDelay]="i * 100">
           <div class="category-header">
             <span class="category-icon">{{ category.icon }}</span>
             <h3 class="category-name">{{ category.name }}</h3>
@@ -17,7 +17,7 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">{{ skill.name }}</span>
-                  <span class="skill-level">{{ skill.level }}%</span>
+                  <span class="skill-level"><span [appCountUp]="skill.level" [countDuration]="1200"></span>%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" [style.width.%]="skill.level"></div>
