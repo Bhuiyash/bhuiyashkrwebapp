@@ -1,12 +1,12 @@
 <section id="about" class="about-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appScrollReveal>
       <span class="section-tag">Get To Know</span>
       <h2 class="section-title">About Me</h2>
     </div>
 
     <div class="about-content">
-      <div class="about-image">
+      <div class="about-image" appScrollReveal>
         <div class="image-wrapper">
           <div class="image-bg"></div>
           <div class="image-placeholder">
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="about-text">
+      <div class="about-text" appScrollReveal [revealDelay]="150">
         <p class="intro">
           I'm a passionate <span class="highlight">Software Developer</span> with a love for creating 
           elegant solutions to complex problems. With expertise in modern web technologies, 
@@ -35,10 +35,16 @@
         </p>
 
         <div class="highlights-grid">
-          @for (item of highlights; track item.label) {
-            <div class="highlight-card">
+          @for (item of highlights; track item.label; let i = $index) {
+            <div class="highlight-card" appSpotlight appScrollReveal [revealDelay]="i * 100">
               <span class="highlight-icon">{{ item.icon }}</span>
-              <span class="highlight-value">{{ item.value }}</span>
+              <span class="highlight-value">
+                @if (item.target !== null) {
+                  <span [appCountUp]="item.target" [countDecimals]="item.decimals"></span>{{ item.suffix }}
+                } @else {
+                  {{ item.display }}
+                }
+              </span>
               <span class="highlight-label">{{ item.label }}</span>
             </div>
           }

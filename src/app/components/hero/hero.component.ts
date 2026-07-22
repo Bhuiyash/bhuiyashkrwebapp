@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,72 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit, OnDestroy {
+  roles = ['Software Developer', '.NET Developer', 'Angular Developer', 'Full-Stack Engineer'];
+  displayedRole = signal('');
+  avatarTilt = signal({ rx: 0, ry: 0 });
+
+  private roleIndex = 0;
+  private charIndex = 0;
+  private deleting = false;
+  private typeTimeoutId?: ReturnType<typeof setTimeout>;
+  private reduceMotion = false;
+
+  ngOnInit(): void {
+    this.reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (this.reduceMotion) {
+      this.displayedRole.set(this.roles[0]);
+      return;
+    }
+    this.typeLoop();
+  }
+
+  ngOnDestroy(): void {
+    if (this.typeTimeoutId) {
+      clearTimeout(this.typeTimeoutId);
+    }
+  }
+
+  onAvatarMouseMove(event: MouseEvent): void {
+    if (this.reduceMotion) {
+      return;
+    }
+    const el = event.currentTarget as HTMLElement;
+    const rect = el.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    this.avatarTilt.set({ rx: y * -14, ry: x * 14 });
+  }
+
+  onAvatarMouseLeave(): void {
+    this.avatarTilt.set({ rx: 0, ry: 0 });
+  }
+
+  private typeLoop(): void {
+    const current = this.roles[this.roleIndex];
+
+    if (!this.deleting) {
+      this.charIndex++;
+      this.displayedRole.set(current.slice(0, this.charIndex));
+
+      if (this.charIndex === current.length) {
+        this.deleting = true;
+        this.typeTimeoutId = setTimeout(() => this.typeLoop(), 1800);
+        return;
+      }
+      this.typeTimeoutId = setTimeout(() => this.typeLoop(), 80);
+    } else {
+      this.charIndex--;
+      this.displayedRole.set(current.slice(0, this.charIndex));
+
+      if (this.charIndex === 0) {
+        this.deleting = false;
+        this.roleIndex = (this.roleIndex + 1) % this.roles.length;
+      }
+      this.typeTimeoutId = setTimeout(() => this.typeLoop(), 40);
+    }
+  }
+
   technologies = [
     'Angular',
     'TypeScript', 

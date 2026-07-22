@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
+import { SpotlightDirective } from '../../directives/spotlight.directive';
 
 interface Education {
   degree: string;
@@ -19,7 +21,7 @@ interface Certification {
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective, SpotlightDirective],
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'
 })

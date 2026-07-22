@@ -1,6 +1,6 @@
 <section id="contact" class="contact-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appScrollReveal>
       <span class="section-tag">Get In Touch</span>
       <h2 class="section-title">Let's Work Together</h2>
       <p class="section-subtitle">
@@ -9,13 +9,13 @@
     </div>
 
     <div class="contact-content">
-      <div class="contact-info-section">
+      <div class="contact-info-section" appScrollReveal>
         <h3 class="info-title">Contact Information</h3>
         <p class="info-description">Feel free to reach out through any of the following channels:</p>
-        
+
         <div class="contact-cards">
           @for (info of contactInfo; track info.label) {
-            <div class="contact-card">
+            <div class="contact-card" appSpotlight>
               <span class="card-icon">{{ info.icon }}</span>
               <div class="card-content">
                 <span class="card-label">{{ info.label }}</span>
@@ -51,8 +51,8 @@
         </div>
       </div>
 
-      <div class="cta-section">
-        <div class="cta-card">
+      <div class="cta-section" appScrollReveal [revealDelay]="150">
+        <div class="cta-card" appSpotlight>
           <div class="cta-decoration">
             <div class="decoration-circle circle-1"></div>
             <div class="decoration-circle circle-2"></div>

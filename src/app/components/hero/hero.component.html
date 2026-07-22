@@ -11,7 +11,7 @@
       <p class="greeting animate-fade-up">Hello, I'm</p>
       <h1 class="name animate-fade-up delay-1">Bhuiyash Kumar</h1>
       <h2 class="title animate-fade-up delay-2">
-        <span class="gradient-text">Software Developer</span>
+        <span class="gradient-text">{{ displayedRole() }}</span><span class="typing-cursor">|</span>
       </h2>
       <p class="description animate-fade-up delay-3">
         I craft beautiful, performant web applications with modern technologies.
@@ -52,7 +52,12 @@
     </div>
 
     <div class="hero-visual animate-fade-left">
-      <div class="avatar-container">
+      <div
+        class="avatar-container"
+        [style.transform]="'perspective(800px) rotateX(' + avatarTilt().rx + 'deg) rotateY(' + avatarTilt().ry + 'deg)'"
+        (mousemove)="onAvatarMouseMove($event)"
+        (mouseleave)="onAvatarMouseLeave()"
+      >
         <div class="avatar-ring"></div>
         <div class="avatar">
           <img src="assets/BhuiyashKumarLinkedin.png" alt="Bhuiyash Kumar" class="profile-image">
