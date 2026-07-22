@@ -1,6 +1,6 @@
 .contact-section {
   padding: 6rem 2rem;
-  background: linear-gradient(180deg, #0a0f1a 0%, #0f172a 100%);
+  background: linear-gradient(180deg, var(--bg-base-alt) 0%, var(--bg-base) 100%);
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   position: relative;
   display: inline-block;
   margin-bottom: 1rem;
@@ -46,7 +46,7 @@
 }
 
 .section-subtitle {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 1.5rem auto 0;
@@ -62,7 +62,7 @@
 
 /* Contact Info Section */
 .contact-info-section {
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--surface-card);
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 24px;
   padding: 2.5rem;
@@ -71,12 +71,12 @@
 .info-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 0.5rem;
 }
 
 .info-description {
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
@@ -122,14 +122,14 @@
 
 .card-label {
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
 
 .card-value {
-  color: #fff;
+  color: var(--text-heading);
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -148,7 +148,7 @@ a.card-value:hover {
 .social-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 1rem;
 }
 
@@ -244,12 +244,12 @@ a.card-value:hover {
 .cta-content h3 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-heading);
   margin-bottom: 0.75rem;
 }
 
 .cta-content p {
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 2rem;
   font-size: 1.05rem;
 }
